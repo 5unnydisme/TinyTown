@@ -44,3 +44,6 @@ Thumbs.db
 # AR Foundation specific
 /[Aa]ssets/XR/
 /[Aa]ssets/Plugins/
+
+#TestEnvironmentFiles 
+App/UnityXRContent/ARFoundation/SimulationEnvironments/
