@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ROV_Exploration.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ROV_Inspection.unity
     guid: 97aff411a82d645c8a5f54ab5525ca2a
+  - enabled: 1
+    path: Assets/Scenes/ROV_Building.unity
+    guid: c185f37577d32422c8d8113b8f500498
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9c241c4064e6e49a2b2d0e47b87784bd,
       type: 2}

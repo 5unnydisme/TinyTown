@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5098350197024399583
+  m_GuidHigh: 16704641085831049895
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5037130229332351380
+      m_GuidHigh: 4500984854956130488
+    m_SerializedTextureGuid:
+      m_GuidLow: 15288040467882500121
+      m_GuidHigh: 8746878082273479259
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Step_01
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4906820063925440049
+      m_GuidHigh: 10088582870325066406
+    m_SerializedTextureGuid:
+      m_GuidLow: 11871668749366146253
+      m_GuidHigh: 10062448224476277850
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Step_02
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5576257813678231417
+      m_GuidHigh: 43738984758480055
+    m_SerializedTextureGuid:
+      m_GuidLow: 17615962016607416188
+      m_GuidHigh: 3544917201901119467
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Step_03
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4785574901012850564
+      m_GuidHigh: 13425001377167959977
+    m_SerializedTextureGuid:
+      m_GuidLow: 2633861145672243418
+      m_GuidHigh: 17139043890295694842
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Step_04
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4948414476402005922
+      m_GuidHigh: 743332835188229007
+    m_SerializedTextureGuid:
+      m_GuidLow: 9542344165721986523
+      m_GuidHigh: 5924025245465630251
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Step_05
+    m_Texture: {fileID: 0}
