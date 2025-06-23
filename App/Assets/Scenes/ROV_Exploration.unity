@@ -445,6 +445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 439132715}
   - component: {fileID: 439132714}
+  - component: {fileID: 439132716}
   m_Layer: 0
   m_Name: PackageSpawner
   m_TagString: Untagged
@@ -489,6 +490,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &439132716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439132713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724bc7358c1294f95916ae91213d99d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drivingSurfaceManager: {fileID: 1964602100}
+  gridCellPrefab: {fileID: 2225962128681149927, guid: 1390d1fee42e84ab0a83bceb03de3834,
+    type: 3}
+  gridWidth: 5
+  gridHeight: 5
+  cellSize: 0.2
+  cellHeight: 0.01
+  gridSpacing: 0.05
+  greenMaterial: {fileID: 2100000, guid: fb13b6f39655543959307dcbfed3ebcd, type: 2}
+  redMaterial: {fileID: 2100000, guid: caf434e42b156492d82cce48d7aa1c3e, type: 2}
+  blueMaterial: {fileID: 0}
+  yellowMaterial: {fileID: 0}
+  patternType: 2
+  noiseScale: 5
 --- !u!1 &486553688
 GameObject:
   m_ObjectHideFlags: 0
