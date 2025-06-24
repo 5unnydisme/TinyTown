@@ -445,7 +445,6 @@ GameObject:
   m_Component:
   - component: {fileID: 439132715}
   - component: {fileID: 439132714}
-  - component: {fileID: 439132716}
   m_Layer: 0
   m_Name: PackageSpawner
   m_TagString: Untagged
@@ -490,32 +489,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &439132716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439132713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 724bc7358c1294f95916ae91213d99d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drivingSurfaceManager: {fileID: 1964602100}
-  gridCellPrefab: {fileID: 2225962128681149927, guid: 1390d1fee42e84ab0a83bceb03de3834,
-    type: 3}
-  gridWidth: 5
-  gridHeight: 5
-  cellSize: 0.2
-  cellHeight: 0.01
-  gridSpacing: 0.05
-  greenMaterial: {fileID: 2100000, guid: fb13b6f39655543959307dcbfed3ebcd, type: 2}
-  redMaterial: {fileID: 2100000, guid: caf434e42b156492d82cce48d7aa1c3e, type: 2}
-  blueMaterial: {fileID: 0}
-  yellowMaterial: {fileID: 0}
-  patternType: 2
-  noiseScale: 5
 --- !u!1 &486553688
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +630,64 @@ Transform:
   m_Children:
   - {fileID: 1375737369}
   m_Father: {fileID: 1964602099}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &799034525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 799034527}
+  - component: {fileID: 799034526}
+  m_Layer: 0
+  m_Name: ObstacleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &799034526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799034525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23879c885fce14682b53e23926810ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefabs:
+  - {fileID: 5083699778350209383, guid: 3a928a843b1a24cf88c05f5b990cbe04, type: 3}
+  - {fileID: 4203283667407439830, guid: 7aac89eca5ed74421bfa617a37c10c41, type: 3}
+  - {fileID: 7968339589320440966, guid: 14becd05505dc448baa8a5a932f11f57, type: 3}
+  raycastManager: {fileID: 1964602101}
+  planeManager: {fileID: 1964602102}
+  obstaclesPerPlane: 10
+  minDistanceBetweenObstacles: 0.2
+  maxHeightDifference: 0.3
+  showDebugLogs: 1
+  visualizePoints: 1
+  debugColor: {r: 1, g: 0, b: 0, a: 1}
+  invalidPointColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  debugLineDuration: 3
+--- !u!4 &799034527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799034525}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.07006347, y: -0.1674338, z: -0.2704717}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &911527139
 GameObject:
@@ -1613,8 +1644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e517a83db04f4bbc06334df282288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlaneManager: {fileID: 0}
-  RaycastManager: {fileID: 0}
+  PlaneManager: {fileID: 1964602102}
+  RaycastManager: {fileID: 1964602101}
   LockedPlane: {fileID: 0}
 --- !u!114 &1964602101
 MonoBehaviour:
@@ -1643,7 +1674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PlanePrefab: {fileID: 8108063790773458506, guid: 4a7f648a8c8ca47c3bc5cb4dc65982ac,
     type: 3}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1656,3 +1687,4 @@ SceneRoots:
   - {fileID: 439132715}
   - {fileID: 911527144}
   - {fileID: 486553691}
+  - {fileID: 799034527}
