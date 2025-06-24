@@ -669,11 +669,6 @@ MonoBehaviour:
   obstaclesPerPlane: 10
   minDistanceBetweenObstacles: 0.2
   maxHeightDifference: 0.3
-  showDebugLogs: 1
-  visualizePoints: 1
-  debugColor: {r: 1, g: 0, b: 0, a: 1}
-  invalidPointColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  debugLineDuration: 3
 --- !u!4 &799034527
 Transform:
   m_ObjectHideFlags: 0
@@ -1672,7 +1667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 8108063790773458506, guid: 4a7f648a8c8ca47c3bc5cb4dc65982ac,
+  m_PlanePrefab: {fileID: 2080369339933002901, guid: 5c528bf17058b47ba8da01f86c68d6d9,
     type: 3}
   m_DetectionMode: 1
 --- !u!1660057539 &9223372036854775807
