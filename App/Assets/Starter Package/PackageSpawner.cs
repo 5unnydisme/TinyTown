@@ -122,7 +122,7 @@ public class PackageSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (UIManager.IsROVBrokenMenuActive)
+        if (UIManager.IsROVBrokenMenuActive || UIManager.IsWarningMenuActive || UIManager.IsBatteryWarningMenuActive)
             return;
 
         var lockedPlane = DrivingSurfaceManager.LockedPlane;

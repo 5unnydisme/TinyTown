@@ -15,6 +15,10 @@ public class PlaceContent : MonoBehaviour
     private bool hasBeenPlaced = false;
     private List<GameObject> childObjects = new List<GameObject>();
 
+    // Public property to check if object has been placed
+    public bool HasBeenPlaced => hasBeenPlaced;
+    public bool CanPlace => canPlace;
+
     void Start()
     {
         // Disable placement at start
@@ -37,8 +41,8 @@ public class PlaceContent : MonoBehaviour
 
     private void Update()
     {
-        // Only allow placement if enabled
-        if (canPlace && Input.GetMouseButtonDown(0) && !IsClickOverUI())
+        // Only allow placement if enabled and not already placed
+        if (canPlace && !hasBeenPlaced && Input.GetMouseButtonDown(0) && !IsClickOverUI())
         {
             List<ARRaycastHit> hitPoints = new List<ARRaycastHit>();
             raycastManager.Raycast(Input.mousePosition, hitPoints, TrackableType.Planes);
@@ -57,6 +61,7 @@ public class PlaceContent : MonoBehaviour
                         child.SetActive(true); // Show all child objects
                     }
                     hasBeenPlaced = true; // Ensure this only happens once
+                    canPlace = false; // Disable further placement
                 }
             }
         }

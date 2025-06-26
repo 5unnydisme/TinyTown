@@ -20,7 +20,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
 /**
- * Spawns a <see cref="CarBehaviour"/> when a plane is tapped.
+ * Spawns a <see cref="ROVBehaviour"/> when a plane is tapped.
  */
 public class CarManager : MonoBehaviour
 {
@@ -28,15 +28,15 @@ public class CarManager : MonoBehaviour
     public ReticleBehaviour Reticle;
     public DrivingSurfaceManager DrivingSurfaceManager;
 
-    public CarBehaviour Car;
+    public ROVBehaviour Car;
 
     private void Update()
     {
         if (Car == null && WasTapped() && Reticle.CurrentPlane != null)
         {
-            // Spawn our car at the reticle location.
+            // Spawn our ROV at the reticle location.
             var obj = GameObject.Instantiate(CarPrefab);
-            Car = obj.GetComponent<CarBehaviour>();
+            Car = obj.GetComponent<ROVBehaviour>();
             Car.Reticle = Reticle;
             Car.transform.position = Reticle.transform.position;
             DrivingSurfaceManager.LockPlane(Reticle.CurrentPlane);
