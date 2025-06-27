@@ -10,11 +10,26 @@ public class InfoBehavior : MonoBehaviour
     Vector3 desiredScale = Vector3.zero;
 
 
+    void Start()
+    {
+        if (SectionInfo == null)
+        {
+            Debug.LogWarning($"InfoBehavior on {gameObject.name}: SectionInfo is not assigned!");
+        }
+        else
+        {
+            Debug.Log($"InfoBehavior on {gameObject.name}: SectionInfo assigned to {SectionInfo.name}");
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        SectionInfo.localScale = Vector3.Lerp(SectionInfo.localScale, desiredScale, Time.deltaTime * SPEED);
-
+        // Check if SectionInfo is assigned before using it
+        if (SectionInfo != null)
+        {
+            SectionInfo.localScale = Vector3.Lerp(SectionInfo.localScale, desiredScale, Time.deltaTime * SPEED);
+        }
     }
 
     public void OpenInfo()
